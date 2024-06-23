@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Jokes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Titan+One&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <style>
+    :root {
+  --card-height: 65vh;
+  --card-width: calc(var(--card-height) / 1.5);
+}
+    #get {
+      font-size: larger;
+      border-radius: 10px;  
+      background-color: #2ecc71;
+    }
+
+    #get:hover {
+      font-size: larger;
+      border-radius: 10px;
+      background-color: ghostwhite;
+    }
+
+    #post {
+      font-size: larger;
+      border-radius: 10px;
+      background-color: #3498db;
+    }
+
+    #post:hover {
+      font-size: larger;
+      border-radius: 10px;
+      background-color: ghostwhite;
+    }
+
+    #put {
+      font-size: larger;
+      border-radius: 10px;
+      background-color: #9b59b6;
+    }
+
+    #put:hover {
+      font-size: larger;
+      border-radius: 10px;
+      background-color: ghostwhite;
+    }
+
+    #patch {
+      font-size: larger;
+      border-radius: 10px;
+      background-color: #f1c40f;
+    }
+
+    #patch:hover {
+      font-size: larger;
+      border-radius: 10px;
+      background-color: ghostwhite;
+    }
+
+    #delete {
+      font-size: larger;
+      border-radius: 10px;
+      background-color: #e74c3c;
+    }
+
+    #delete:hover {
+      font-size: larger;
+      border-radius: 10px;
+      background-color: ghostwhite;
+    }
+    body{
+        background-color: black;
+        text-align: center;
+        align-items: center ;
+        font-family: cursive;
+        font-size: larger;
+    }
+.card {
+  background-color: blueviolet;
+  display: flex ;
+  border-radius: 10%;
+  width: var(--card-width);
+  height: var(--card-height);
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  text-wrap: balance;
+  margin-bottom: 20px;
+}
+.card:hover {
+  color: rgb(88 199 250 / 100%);
+  transition: color 1s;
+}
+h1{
+  color: white;
+}
+ </style>
+</head>
+<body>
+  <h1>What's your joke type?</h1>
+  <div class="card">
+    <p>
+      <% if(locals.secret){ %>  
+        <%= secret %>
+      <% }else{%>
+        <p>Please select the following type of joke</p>
+    <% }%>
+    </p>
+  </div>
+  <div class="myForm">
+    <form id="myForm" method="post">
+    <input id="get" type="submit" value="Programming" formaction="/programming">
+    <input id="post" type="submit" value="Misc" formaction="/misc">
+    <input id="put" type="submit" value="Dark" formaction="/dark">
+    <input id="patch" type="submit" value="Pun" formaction="/pun">
+    <input id="delete" type="submit" value="Spooky" formaction="/spooky">
+    </form>
+  </div>
+</body>
+
+</html>
